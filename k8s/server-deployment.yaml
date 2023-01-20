@@ -10,11 +10,11 @@ spec:
   template:
     metadata:
       labels:
-        component: server 
+        component: server
     spec:
       containers:
         - name: server-deployment
-          image: stephengrider/multi-server
+          image: kavyanaik/multi-server
           ports:
             - containerPort: 5000
           env:
