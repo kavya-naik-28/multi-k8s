@@ -14,11 +14,9 @@ jobs:
       - run: docker run -e CI=true kavyanaik/react-test npm test
  
       - run: docker build -t kavyanaik/multi-client ./client
-      - run: docker build -t kavyanaik/multi-nginx ./nginx
       - run: docker build -t kavyanaik/multi-server ./server
       - run: docker build -t kavyanaik/multi-worker ./worker
  
       - run: docker push kavyanaik/multi-client
-      - run: docker push kavyanaik/multi-nginx
       - run: docker push kavyanaik/multi-server
       - run: docker push kavyanaik/multi-worker
